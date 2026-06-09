@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Tajawal", "Inter", sans-serif;
+  --font-cairo: "Cairo", sans-serif;
+  
+  --color-navy-50: #0d1b2a; /* Deep primary dark background */
+  --color-navy-100: #203756;
+  --color-navy-200: #cbd8eb;
+  --color-navy-300: #a1badc;
+  --color-navy-400: #7199ca;
+  --color-navy-500: #162a44; /* Bento container navy */
+  --color-navy-600: #1c324f;
+  --color-navy-700: #2d486b;
+  --color-navy-800: #162a44; /* Core Bento container background */
+  --color-navy-900: #0d1b2a; /* Outer Bento canvas background */
+  --color-navy-950: #060e17;
+  
+  --color-gold-50: #fbf7ee;
+  --color-gold-100: #fbf0d9;
+  --color-gold-200: #f4dfa1;
+  --color-gold-300: #eed07d;
+  --color-gold-400: #e7c059;
+  --color-gold-500: #e0b354; /* Main Bento Warm Gold accent */
+  --color-gold-600: #c99c43;
+  --color-gold-700: #a77d33;
+  --color-gold-800: #886227;
+  --color-gold-900: #66481c;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    direction: rtl; /* Force RTL direction for Arabic landing page */
+  }
+  
+  body {
+    font-family: var(--font-sans);
+    background-color: #0d1b2a;
+    color: #f4f6fa;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-cairo);
+  }
+}
+
+/* Custom utility styles */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #fbf0d9 0%, #e0b354 50%, #a77d33 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #e0b354 0%, #c99c43 50%, #886227 100%);
+}
+
+.navy-gradient-bg {
+  background: linear-gradient(135deg, #162a44 0%, #0d1b2a 100%);
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 15px rgba(224, 179, 84, 0.15);
+  border: 1px solid rgba(224, 179, 84, 0.2);
+}
+
+.gold-border-glow-hover:hover {
+  box-shadow: 0 0 25px rgba(224, 179, 84, 0.3);
+  border: 1px solid rgba(224, 179, 84, 0.5);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Simple custom animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+

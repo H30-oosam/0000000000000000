@@ -1,0 +1,6 @@
+{
+  "name": "أكاديمية المنى للتمكين والتدريب",
+  "description": "المنصة الرسمية لأكاديمية المنى للتمكين والتدريب - نحو تمكين مهني وشخصي يفتح لك آفاق النجاح والتطور الحقيقي",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
